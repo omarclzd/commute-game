@@ -2,13 +2,9 @@
 
 Commute is a game in which the user will try to reach the goal of commuting to work. The user will be presented with different choices along the way. Each choice will have a result that will affect the effectiveness of his route to work. If wrong choices are made the user may face negative consequences that will prevent him from achieving the goal(work). The user will win the game by choosing the correct choices that result in a successfull path to work.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ## Wireframe
 
-![alt text](https://raw.githubusercontent.com/omarclzd/commute-game/master/images/commute-wireframe.png)
+![commute game wireframe](https://raw.githubusercontent.com/omarclzd/commute-game/master/home/code/commute-game/images/commute-wireframe.png)
 
 ## Pseudocode
 
@@ -43,4 +39,3 @@ Repeat until user has reached the end of wrong paths, which will display a messa
 
 * **Omar Calzada** - [omarclzd](https://github.com/omarclzd)
 
-## Acknowledgments
