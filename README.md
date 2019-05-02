@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Wireframe
 
-![alt text](https://raw.githubusercontent.com/omarclzd/commute-game/images/commute-wireframe.png)
+![alt text](https://raw.githubusercontent.com/omarclzd/commute-game/master/images/commute-wireframe.png)
 
 ## Pseudocode
 
