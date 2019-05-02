@@ -4,7 +4,7 @@ Commute is a game in which the user will try to reach the goal of commuting to w
 
 ## Wireframe
 
-![commute game wireframe](./master/images/commute-wireframe.png)
+![commute game wireframe](../master/images/commute-wireframe.png)
 
 ## Pseudocode
 
