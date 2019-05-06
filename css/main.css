@@ -1,5 +1,5 @@
 html, * {
-  font-family: helvetica;
+  font-family: 'Gugi', cursive;
   box-sizing: border-box;
 }
 
@@ -29,4 +29,13 @@ main div {
   margin: 5vw;
   padding: 5vmin 15vmin;
   border: solid;
+}
+
+button {
+  color: green;
+  font-size: 15px;
+  text-decoration: none;
+  position: relative;
+  padding: 2px 15px;
+  /* margin: 0 10px 0 0; */
 }
