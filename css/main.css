@@ -23,7 +23,9 @@ main {
   
 }
 
-main section {
+main div {
+  display: flex;
+  flex-direction: row;
   margin: 5vw;
   padding: 5vmin 15vmin;
   border: solid;
