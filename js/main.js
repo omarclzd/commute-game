@@ -3,27 +3,39 @@
 const story = {
   'standby': 'Get to work!',
   'Home': 'Alarm rings.',
-  'Wakeup': 'You are away, but theres a funky smell.',
-  'Snoose': 'Promt for snoose',
+  'Wakeup': 'You are awake, but there is a funky smell.',
   'Brakealarm': 'You smash your alarm in defiance and now your hand is bleeding furiously.',
+  'Tend Wound': 'You did not pay attention in first aid class. You die from blood loss.',
+  'Lick Wound': 'You realize what you have been missing, and set off to be like your hero Edward Cullen. However, you did not make it to work.',
   'Shower': 'While singing in the shower you atempt a power glide and break your neck in the process.',
-  'Kitchen': 'Kitchen promt',
+  'Kitchen': 'You are feeling kind of lazy. What should you eat?',
+  'Instant ramen': `You put your ramen in the microwave for 5 mins, but forget to put some water in it. You ramen catches fire and your microwave explodes launching you through your apartment wall. You land on your neighbor's cat killing him. Your neighbor in anger shoots you dead.`,
+  'BussStop': 'BussStop promt',
+  'Bike ride': 'Bikeride promt',
+  'Run': 'Run prompt',
+  'Death': 'You failed to get to work.'
 
   
 };
 
 const storyChoice = {
-  'Home': {'button-one': 'Wake up', 'button-two': 'Snoose', 'button-three': 'Brake alarm'},
+  'Home': {'button-one': 'Wake up', 'button-two': 'Brake alarm'},
 
-  'Wakeup': {'button-one': 'take cold shower', 'button-two': 'Skip shower and make breakfast','button-three': 'Choice 3.'},
+  'Wakeup': {'button-one': 'take cold shower', 'button-two': 'Skip shower and get breakfast'},
 
-  'Snoose': {'button-one': 'Choice1', 'button-two': 'Choice2', 'button-three': 'Choice3'},
+  'Brakealarm': {'button-one': 'tend wound', 'button-two': 'lick wound'},
 
-  'Brakealarm': {'button-one': 'tend wound', 'button-two': 'lick wound', 'button-three': 'ignore'},
+  'Kitchen': {'button-one': 'Gourmet meal', 'button-two': 'Instant ramen'},
 
-  'Kitchen': {'button-one': 'Kchoice1', 'button-two': 'Kchoice2', 'button-three': 'Kchoice3'},
+  'BussStop': {'button-one': 'Bchoice1', 'button-two': 'Bchoice2'},
 
-  'death': {'button-one': 'You', 'button-two': 'Have', 'button-three': 'Died'},
+  'Bike ride': {'button-one': 'Bikechoice1', 'button-two': 'Bikechoice2'},
+
+  'Run': {'button-one': 'Rchoice1', 'button-two': 'Rchoice2'},
+
+  'Death': {'button-one': 'You', 'button-two': 'Died'},
+
+  'Nocomment': {'button-one': 'No', 'button-two': 'Comment'},
 
 };
 
@@ -35,70 +47,128 @@ var winner, state;
 const msgEl = document.getElementById('msg');
 const button1 = document.getElementById('button-one');
 const button2 = document.getElementById('button-two');
-const button3 = document.getElementById('button-three');
 //const buttons = document.getElementsByClassName('')
 
 
 /*----- event listeners -----*/ 
 document.getElementById('button-one').addEventListener('click', handleBOne);
 document.getElementById('button-two').addEventListener('click', handleBTwo);
-document.getElementById('button-three').addEventListener('click', handleBThree);
+;
+//document.getElementById('choices').addEventListener('click', handleClick);
 document.querySelector('button').addEventListener('click', handleStart);
 
 /*----- functions -----*/
 init();
 
 function handleStart(evt) {
+  
   if (state === story['standby']) {
-    return state = story['Home'];
-  } 
+     state = story['Home'];
+    
+  };
   render();
 }
 
+// function handleClick(evt) {
+//   let choice = evt.target;
+//   if (choice === storyChoice['Home']['button-one']) {
+//   return state = story['Wakeup'];
+// }
+// }
+
 function handleBOne(evt) {
+  choice = evt.target;
+
   if (state === story['Home']) {
-    return state = story['Wakeup'];
+     state = story['Wakeup'];
+  } else {
+    if (state === story['Wakeup']) {
+      state = story['Shower'];
+    } else {
+      if (state === story['Brakealarm']) {
+        state = story['Tend Wound'];
+      }
+    }
   }
   render();
+  
+
 }
+
 
 function handleBTwo(evt) {
   if (state === story['Home']) {
-    return state = story['Snoose'];
+    state = story['Brakealarm'];
+  } else {
+    if (state === story['Brakealarm']) {
+      state = story['Lick Wound'];
+    } else {
+      if (state === story['Wakeup']) {
+        state = story['Kitchen'];
+      } else {
+        if (state === story['Kitchen']) {
+          state = story['Instant ramen'];
+        }
+      }
+    }
   }
   render();
+  
 }
 
-function handleBThree(evt) {
-  if (state === story['Home']) {
-    return state = story['Brakealarm'];
-  }
-  render();
-}
+
 
 
 function render() {
   msgEl.textContent = state;
+  //stateCheckingWithSwitch()
   if (state === story['Home']) {
     button1.textContent = storyChoice['Home']['button-one'];
     button2.textContent = storyChoice['Home']['button-two'];
-    button3.textContent = storyChoice['Home']['button-three'];
 
   } else {
     if (state === story['Wakeup']) {
     button1.textContent = storyChoice['Wakeup']['button-one'];
     button2.textContent = storyChoice['Wakeup']['button-two'];
-    button3.textContent = storyChoice['Wakeup']['button-three'];
     } else {
-      if (state === story['Snoose']) {
-      button1.textContent = storyChoice['Snoose']['button-one'];
-      button2.textContent = storyChoice['Snoose']['button-two'];
-      button3.textContent = storyChoice['Snoose']['button-three'];
+      if (state === story['Brakealarm']) {
+      button1.textContent = storyChoice['Brakealarm']['button-one'];
+      button2.textContent = storyChoice['Brakealarm']['button-two'];
       } else {
-        if (state === story['Brakealarm']) {
-          button1.textContent = storyChoice['Brakealarm']['button-one'];
-          button2.textContent = storyChoice['Brakealarm']['button-two'];
-          button3.textContent = storyChoice['Brakealarm']['button-three'];
+        if (state === story['Kitchen']) {
+          button1.textContent = storyChoice['Kitchen']['button-one'];
+          button2.textContent = storyChoice['Kitchen']['button-two'];
+        } else {
+          if (state === story['BussStop']) {
+            button1.textContent = storyChoice['BussStop']['button-one'];
+            button2.textContent = storyChoice['BussStop']['button-two'];
+          } else {
+            if (state === story['Bike ride']) {
+              button1.textContent = storyChoice['Bike ride']['button-one'];
+              button2.textContent = storyChoice['Bike ride']['button-two'];
+
+            } else {
+              if (state === story['Shower']) {
+                button1.textContent = storyChoice['Death']['button-one'];
+                button2.textContent = storyChoice['Death']['button-two'];
+              } else {
+                if (state === story['Tend Wound']) {
+                  button1.textContent = storyChoice['Death']['button-one'];
+                  button2.textContent = storyChoice['Death']['button-two'];
+                } else {
+                  if (state === story['Lick Wound']) {
+                    button1.textContent = storyChoice['Nocomment']['button-one'];
+                    button2.textContent = storyChoice['Nocomment']['button-two'];
+                  } else {
+                    if (state === story['Instant ramen']) {
+                      button1.textContent = storyChoice['Death']['button-one'];
+                      button2.textContent = storyChoice['Death']['button-two'];
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     } 
@@ -110,6 +180,24 @@ function render() {
   
   
 }
+
+
+// function stateCheckingWithSwitch () {
+//   switch (state) {
+//     case story['Home']:
+//       // button1.textContent = storyChoice['Home']['button-one'];
+//       // button2.textContent = storyChoice['Home']['button-two'];
+//       console.log('this is inside of the switch', story['Home']);
+//       break;
+//     case story['Wakeup']:
+//       console.log('switch', story['Wakeup']);
+//       break;
+//     default:
+//       console.log('Sorry, we are out of ' + '.');
+//   }
+  
+// }
+
 
 function init() {
   state = story['standby'];
