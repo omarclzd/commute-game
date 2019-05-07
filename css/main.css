@@ -4,6 +4,8 @@ html, * {
 }
 
 body {
+  background-color: #212121;
+  color: white;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,8 +14,14 @@ body {
 }
 
 header {
-  font-size: 50px;
+  font-size: 10vmin;
 
+
+}
+
+section {
+  font-size: 3vmin;
+  text-align: center;
 }
 
 main {
@@ -26,16 +34,40 @@ main {
 main div {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  font-size: 2.5vmin;
   margin: 5vw;
-  padding: 5vmin 15vmin;
+  padding: 4vh 4vw;
   border: solid;
 }
 
-button {
-  color: green;
-  font-size: 15px;
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+
+#start {
+  background-color: #444040;
+  color: white;
+  font-size: 2vmin;
   text-decoration: none;
   position: relative;
-  padding: 2px 15px;
-  /* margin: 0 10px 0 0; */
+  padding: .5vmin 3vmin;
+  margin-bottom: 1vmin;
+  
+}
+
+#reset {
+  background-color: white;
+  color: black;
+  font-size: 2vmin;
+  text-decoration: none;
+  position: relative;
+  padding: .5vmin 2.6vmin;
+
 }

@@ -9,7 +9,8 @@ const story = {
   lickWound: 'You realize what you have been missing, and set off to be like your hero Edward Cullen. However, you did not make it to work.',
   shower: 'While singing in the shower you atempt a power glide and break your neck in the process.',
   kitchen: 'You are feeling kind of lazy. What should you eat?',
-  instantRamen: `You put your ramen in the microwave for 5 mins, but forget to put some water in it. You ramen catches fire and your microwave explodes launching you through your apartment wall. You land on your neighbor's cat killing him. Your neighbor in anger shoots you dead.`,
+  pancakes: `The pancakes were deliciouse...look at the time! You don't want to be late!`,
+  instantRamen: `You put your ramen in the microwave for 5 mins, but forget to put some water in it. The ramen catches fire and your microwave explodes launching you through your apartment wall. You land on your neighbor's cat killing him. Your neighbor, raged in anger, shoots you dead.`,
   bussStop: 'BussStop promt',
   bikeRide: 'Bikeride promt',
   run: 'Run prompt',
@@ -25,7 +26,9 @@ const storyChoice = {
 
   brakeAlarm: {'button-one': 'tend wound', 'button-two': 'lick wound'},
 
-  kitchen: {'button-one': 'Gourmet meal', 'button-two': 'Instant ramen'},
+  kitchen: {'button-one': 'Pancakes', 'button-two': 'Instant ramen'},
+
+  pancakes: {'button-one': 'Get ready', 'button-two': 'Head out'},
 
   bussStop: {'button-one': 'Bchoice1', 'button-two': 'Bchoice2'},
 
@@ -53,9 +56,8 @@ const button2 = document.getElementById('button-two');
 /*----- event listeners -----*/ 
 document.getElementById('button-one').addEventListener('click', handleBOne);
 document.getElementById('button-two').addEventListener('click', handleBTwo);
-;
-//document.getElementById('choices').addEventListener('click', handleClick);
-document.querySelector('button').addEventListener('click', handleStart);
+document.getElementById('start').addEventListener('click', handleStart);
+document.getElementById('reset').addEventListener('click', handleReset);
 
 /*----- functions -----*/
 init();
@@ -69,12 +71,11 @@ function handleStart(evt) {
   render();
 }
 
-// function handleClick(evt) {
-//   let choice = evt.target;
-//   if (choice === storyChoice['Home']['button-one']) {
-//   return state = story['Wakeup'];
-// }
-// }
+function handleReset(evt) {
+  window.location.reload();
+}
+
+
 
 function handleBOne(evt) {
   choice = evt.target;
@@ -87,6 +88,10 @@ function handleBOne(evt) {
     } else {
       if (state === story.brakeAlarm) {
         state = story.tendWound;
+      } else {
+        if (state === story.kitchen) {
+          state = story.pancakes;
+        }
       }
     }
   }
@@ -187,12 +192,10 @@ function stateCheckingWithSwitch () {
     case story.home:
        button1.textContent = storyChoice.home['button-one'];
        button2.textContent = storyChoice.home['button-two'];
-      console.log('this is inside of the switch', story.home);
       break;
     case story.wakeup:
       button1.textContent = storyChoice.wakeup['button-one'];
        button2.textContent = storyChoice.wakeup['button-two'];
-      console.log('switch', story.wakeup);
       break;
     case story.brakeAlarm:
       button1.textContent = storyChoice.brakeAlarm['button-one'];
@@ -204,7 +207,7 @@ function stateCheckingWithSwitch () {
       break; 
     case story.shower:
       button1.textContent = storyChoice.death['button-one'];
-      button2.textContent = storyChoice.death['button-two']; 
+      button2.textContent = storyChoice.death['button-two'];
       break; 
     case story.tendWound:
       button1.textContent = storyChoice.death['button-one'];
@@ -217,9 +220,12 @@ function stateCheckingWithSwitch () {
     case story.instantRamen:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      break; 
+      break;
+    case story.pancakes:
+      button1.textContent = storyChoice.pancakes['button-one'];
+      button2.textContent = storyChoice.pancakes['button-two']; 
+      break;  
     default:
-      console.log('Sorry, we are out of ' + '.');
   }
   
 }
