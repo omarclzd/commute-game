@@ -34,6 +34,7 @@ header {
 section {
   font-size: 3vmin;
   text-align: center;
+  color: #DA3E5D;
 }
 
 main {
@@ -74,23 +75,34 @@ footer {
 #start {
   background-color: #444040;
   color: white;
-  font-size: 2vmin;
+  font-size: 3vmin;
   text-decoration: none;
   position: relative;
   padding: .5vmin 3vmin;
   margin-bottom: 1vmin;
+  padding: 0;
+  border: none;
+  background: none;
+  text-shadow: 1px 1px #DA3E5D, 
+               2px 2px #DA3E5D, 
+               2px 2px #DA3E5D;
   
 }
 
 #reset {
   background-color: #444040;
   color: white;
-  font-size: 2vmin;
+  font-size: 3vmin;
   text-decoration: none;
   position: relative;
   padding: .5vmin 2.6vmin;
+  padding: 0;
+  border: none;
+  background: none;
   text-shadow: 1px 1px #DA3E5D, 
                2px 2px #DA3E5D, 
                2px 2px #DA3E5D;
+
+  
 
 }

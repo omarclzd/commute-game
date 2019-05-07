@@ -64,6 +64,8 @@ var winner, state;
 /*----- cached element references -----*/ 
 const msgEl = document.getElementById('msg');
 const bodyEl = document.querySelector('body');
+const headerEl = document.querySelector('header');
+const footerEl = document.querySelector('footer');
 const button1 = document.getElementById('button-one');
 const button2 = document.getElementById('button-two');
 //const buttons = document.getElementsByClassName('')
@@ -173,12 +175,15 @@ function stateCheckingWithSwitch () {
       button2.textContent = storyChoice.death['button-two'];
       bodyEl.style.backgroundColor = '#8e160e';
       bodyEl.style.color = 'black';
+      msgEl.style.color = 'black';
+      headerEl.textContent = 'Fatality';
       break; 
     case story.tendWound:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two'];
       bodyEl.style.backgroundColor = '#8e160e';
       bodyEl.style.color = 'black'; 
+      msgEl.style.color = 'black';
       break;
     case story.lickWound:
       button1.textContent = storyChoice.noComment['button-one'];
@@ -189,6 +194,7 @@ function stateCheckingWithSwitch () {
       button2.textContent = storyChoice.death['button-two']; 
       bodyEl.style.backgroundColor = '#8e160e';
       bodyEl.style.color = 'black';
+      msgEl.style.color = 'black';
       break;
     case story.pancakes:
       button1.textContent = storyChoice.pancakes['button-one'];
@@ -199,6 +205,7 @@ function stateCheckingWithSwitch () {
       button2.textContent = storyChoice.death['button-two']; 
       bodyEl.style.backgroundColor = '#8e160e';
       bodyEl.style.color = 'black';
+      msgEl.style.color = 'black';
       break;   
     default:
   } 
