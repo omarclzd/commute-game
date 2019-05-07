@@ -1,41 +1,41 @@
 /*----- constants -----*/ 
 
 const story = {
-  'standby': 'Get to work!',
-  'Home': 'Alarm rings.',
-  'Wakeup': 'You are awake, but there is a funky smell.',
-  'Brakealarm': 'You smash your alarm in defiance and now your hand is bleeding furiously.',
-  'Tend Wound': 'You did not pay attention in first aid class. You die from blood loss.',
-  'Lick Wound': 'You realize what you have been missing, and set off to be like your hero Edward Cullen. However, you did not make it to work.',
-  'Shower': 'While singing in the shower you atempt a power glide and break your neck in the process.',
-  'Kitchen': 'You are feeling kind of lazy. What should you eat?',
-  'Instant ramen': `You put your ramen in the microwave for 5 mins, but forget to put some water in it. You ramen catches fire and your microwave explodes launching you through your apartment wall. You land on your neighbor's cat killing him. Your neighbor in anger shoots you dead.`,
-  'BussStop': 'BussStop promt',
-  'Bike ride': 'Bikeride promt',
-  'Run': 'Run prompt',
-  'Death': 'You failed to get to work.'
+  standby: 'Get to work!',
+  home: 'Alarm rings.',
+  wakeup: 'You are awake, but there is a funky smell.',
+  brakeAlarm: 'You smash your alarm in defiance and now your hand is bleeding furiously.',
+  tendWound: 'You did not pay attention in first aid class. You die from blood loss.',
+  lickWound: 'You realize what you have been missing, and set off to be like your hero Edward Cullen. However, you did not make it to work.',
+  shower: 'While singing in the shower you atempt a power glide and break your neck in the process.',
+  kitchen: 'You are feeling kind of lazy. What should you eat?',
+  instantRamen: `You put your ramen in the microwave for 5 mins, but forget to put some water in it. You ramen catches fire and your microwave explodes launching you through your apartment wall. You land on your neighbor's cat killing him. Your neighbor in anger shoots you dead.`,
+  bussStop: 'BussStop promt',
+  bikeRide: 'Bikeride promt',
+  run: 'Run prompt',
+  death: 'You failed to get to work.'
 
   
 };
 
 const storyChoice = {
-  'Home': {'button-one': 'Wake up', 'button-two': 'Brake alarm'},
+  home: {'button-one': 'Wake up', 'button-two': 'Brake alarm'},
 
-  'Wakeup': {'button-one': 'take cold shower', 'button-two': 'Skip shower and get breakfast'},
+  wakeup: {'button-one': 'take cold shower', 'button-two': 'Skip shower and get breakfast'},
 
-  'Brakealarm': {'button-one': 'tend wound', 'button-two': 'lick wound'},
+  brakeAlarm: {'button-one': 'tend wound', 'button-two': 'lick wound'},
 
-  'Kitchen': {'button-one': 'Gourmet meal', 'button-two': 'Instant ramen'},
+  kitchen: {'button-one': 'Gourmet meal', 'button-two': 'Instant ramen'},
 
-  'BussStop': {'button-one': 'Bchoice1', 'button-two': 'Bchoice2'},
+  bussStop: {'button-one': 'Bchoice1', 'button-two': 'Bchoice2'},
 
-  'Bike ride': {'button-one': 'Bikechoice1', 'button-two': 'Bikechoice2'},
+  bikeRide: {'button-one': 'Bikechoice1', 'button-two': 'Bikechoice2'},
 
-  'Run': {'button-one': 'Rchoice1', 'button-two': 'Rchoice2'},
+  run: {'button-one': 'Rchoice1', 'button-two': 'Rchoice2'},
 
-  'Death': {'button-one': 'You', 'button-two': 'Died'},
+  death: {'button-one': 'You', 'button-two': 'Died'},
 
-  'Nocomment': {'button-one': 'No', 'button-two': 'Comment'},
+  noComment: {'button-one': 'No', 'button-two': 'Comment'},
 
 };
 
@@ -62,8 +62,8 @@ init();
 
 function handleStart(evt) {
   
-  if (state === story['standby']) {
-     state = story['Home'];
+  if (state === story.standby) {
+     state = story.home;
     
   };
   render();
@@ -79,14 +79,14 @@ function handleStart(evt) {
 function handleBOne(evt) {
   choice = evt.target;
 
-  if (state === story['Home']) {
-     state = story['Wakeup'];
+  if (state === story.home) {
+     state = story.wakeup;
   } else {
-    if (state === story['Wakeup']) {
-      state = story['Shower'];
+    if (state === story.wakeup) {
+      state = story.shower;
     } else {
-      if (state === story['Brakealarm']) {
-        state = story['Tend Wound'];
+      if (state === story.brakeAlarm) {
+        state = story.tendWound;
       }
     }
   }
@@ -97,17 +97,17 @@ function handleBOne(evt) {
 
 
 function handleBTwo(evt) {
-  if (state === story['Home']) {
-    state = story['Brakealarm'];
+  if (state === story.home) {
+    state = story.brakeAlarm;
   } else {
-    if (state === story['Brakealarm']) {
-      state = story['Lick Wound'];
+    if (state === story.brakeAlarm) {
+      state = story.lickWound;
     } else {
-      if (state === story['Wakeup']) {
-        state = story['Kitchen'];
+      if (state === story.wakeup) {
+        state = story.kitchen;
       } else {
-        if (state === story['Kitchen']) {
-          state = story['Instant ramen'];
+        if (state === story.kitchen) {
+          state = story.instantRamen;
         }
       }
     }
@@ -184,39 +184,39 @@ function render() {
 
 function stateCheckingWithSwitch () {
   switch (state) {
-    case story['Home']:
-       button1.textContent = storyChoice['Home']['button-one'];
-       button2.textContent = storyChoice['Home']['button-two'];
-      console.log('this is inside of the switch', story['Home']);
+    case story.home:
+       button1.textContent = storyChoice.home['button-one'];
+       button2.textContent = storyChoice.home['button-two'];
+      console.log('this is inside of the switch', story.home);
       break;
-    case story['Wakeup']:
-      button1.textContent = storyChoice['Wakeup']['button-one'];
-       button2.textContent = storyChoice['Wakeup']['button-two'];
-      console.log('switch', story['Wakeup']);
+    case story.wakeup:
+      button1.textContent = storyChoice.wakeup['button-one'];
+       button2.textContent = storyChoice.wakeup['button-two'];
+      console.log('switch', story.wakeup);
       break;
-    case story['Brakealarm']:
-      button1.textContent = storyChoice['Brakealarm']['button-one'];
-      button2.textContent = storyChoice['Brakealarm']['button-two']; 
+    case story.brakeAlarm:
+      button1.textContent = storyChoice.brakeAlarm['button-one'];
+      button2.textContent = storyChoice.brakeAlarm['button-two']; 
       break; 
-    case story['Kitchen']:
-      button1.textContent = storyChoice['Kitchen']['button-one'];
-      button2.textContent = storyChoice['Kitchen']['button-two']; 
+    case story.kitchen:
+      button1.textContent = storyChoice.kitchen['button-one'];
+      button2.textContent = storyChoice.kitchen['button-two']; 
       break; 
-    case story['Shower']:
-      button1.textContent = storyChoice['Death']['button-one'];
-      button2.textContent = storyChoice['Death']['button-two']; 
+    case story.shower:
+      button1.textContent = storyChoice.death['button-one'];
+      button2.textContent = storyChoice.death['button-two']; 
       break; 
-    case story['Tend Wound']:
-      button1.textContent = storyChoice['Death']['button-one'];
-      button2.textContent = storyChoice['Death']['button-two']; 
+    case story.tendWound:
+      button1.textContent = storyChoice.death['button-one'];
+      button2.textContent = storyChoice.death['button-two']; 
       break;
-    case story['Lick Wound']:
-      button1.textContent = storyChoice['Nocomment']['button-one'];
-      button2.textContent = storyChoice['Nocomment']['button-two']; 
+    case story.lickWound:
+      button1.textContent = storyChoice.noComment['button-one'];
+      button2.textContent = storyChoice.noComment['button-two']; 
       break;  
-    case story['Instant ramen']:
-      button1.textContent = storyChoice['Death']['button-one'];
-      button2.textContent = storyChoice['Death']['button-two']; 
+    case story.instantRamen:
+      button1.textContent = storyChoice.death['button-one'];
+      button2.textContent = storyChoice.death['button-two']; 
       break; 
     default:
       console.log('Sorry, we are out of ' + '.');
