@@ -121,58 +121,58 @@ function handleBTwo(evt) {
 
 function render() {
   msgEl.textContent = state;
-  //stateCheckingWithSwitch()
-  if (state === story['Home']) {
-    button1.textContent = storyChoice['Home']['button-one'];
-    button2.textContent = storyChoice['Home']['button-two'];
+  stateCheckingWithSwitch()
+  // if (state === story['Home']) {
+  //   button1.textContent = storyChoice['Home']['button-one'];
+  //   button2.textContent = storyChoice['Home']['button-two'];
 
-  } else {
-    if (state === story['Wakeup']) {
-    button1.textContent = storyChoice['Wakeup']['button-one'];
-    button2.textContent = storyChoice['Wakeup']['button-two'];
-    } else {
-      if (state === story['Brakealarm']) {
-      button1.textContent = storyChoice['Brakealarm']['button-one'];
-      button2.textContent = storyChoice['Brakealarm']['button-two'];
-      } else {
-        if (state === story['Kitchen']) {
-          button1.textContent = storyChoice['Kitchen']['button-one'];
-          button2.textContent = storyChoice['Kitchen']['button-two'];
-        } else {
-          if (state === story['BussStop']) {
-            button1.textContent = storyChoice['BussStop']['button-one'];
-            button2.textContent = storyChoice['BussStop']['button-two'];
-          } else {
-            if (state === story['Bike ride']) {
-              button1.textContent = storyChoice['Bike ride']['button-one'];
-              button2.textContent = storyChoice['Bike ride']['button-two'];
+  // } else {
+  //   if (state === story['Wakeup']) {
+  //   button1.textContent = storyChoice['Wakeup']['button-one'];
+  //   button2.textContent = storyChoice['Wakeup']['button-two'];
+  //   } else {
+  //     if (state === story['Brakealarm']) {
+  //     button1.textContent = storyChoice['Brakealarm']['button-one'];
+  //     button2.textContent = storyChoice['Brakealarm']['button-two'];
+  //     } else {
+  //       if (state === story['Kitchen']) {
+  //         button1.textContent = storyChoice['Kitchen']['button-one'];
+  //         button2.textContent = storyChoice['Kitchen']['button-two'];
+  //       } else {
+  //         if (state === story['BussStop']) {
+  //           button1.textContent = storyChoice['BussStop']['button-one'];
+  //           button2.textContent = storyChoice['BussStop']['button-two'];
+  //         } else {
+  //           if (state === story['Bike ride']) {
+  //             button1.textContent = storyChoice['Bike ride']['button-one'];
+  //             button2.textContent = storyChoice['Bike ride']['button-two'];
 
-            } else {
-              if (state === story['Shower']) {
-                button1.textContent = storyChoice['Death']['button-one'];
-                button2.textContent = storyChoice['Death']['button-two'];
-              } else {
-                if (state === story['Tend Wound']) {
-                  button1.textContent = storyChoice['Death']['button-one'];
-                  button2.textContent = storyChoice['Death']['button-two'];
-                } else {
-                  if (state === story['Lick Wound']) {
-                    button1.textContent = storyChoice['Nocomment']['button-one'];
-                    button2.textContent = storyChoice['Nocomment']['button-two'];
-                  } else {
-                    if (state === story['Instant ramen']) {
-                      button1.textContent = storyChoice['Death']['button-one'];
-                      button2.textContent = storyChoice['Death']['button-two'];
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    } 
-  } 
+  //           } else {
+  //             if (state === story['Shower']) {
+  //               button1.textContent = storyChoice['Death']['button-one'];
+  //               button2.textContent = storyChoice['Death']['button-two'];
+  //             } else {
+  //               if (state === story['Tend Wound']) {
+  //                 button1.textContent = storyChoice['Death']['button-one'];
+  //                 button2.textContent = storyChoice['Death']['button-two'];
+  //               } else {
+  //                 if (state === story['Lick Wound']) {
+  //                   button1.textContent = storyChoice['Nocomment']['button-one'];
+  //                   button2.textContent = storyChoice['Nocomment']['button-two'];
+  //                 } else {
+  //                   if (state === story['Instant ramen']) {
+  //                     button1.textContent = storyChoice['Death']['button-one'];
+  //                     button2.textContent = storyChoice['Death']['button-two'];
+  //                   }
+  //                 }
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   } 
+  // } 
  
   
 
@@ -182,21 +182,47 @@ function render() {
 }
 
 
-// function stateCheckingWithSwitch () {
-//   switch (state) {
-//     case story['Home']:
-//       // button1.textContent = storyChoice['Home']['button-one'];
-//       // button2.textContent = storyChoice['Home']['button-two'];
-//       console.log('this is inside of the switch', story['Home']);
-//       break;
-//     case story['Wakeup']:
-//       console.log('switch', story['Wakeup']);
-//       break;
-//     default:
-//       console.log('Sorry, we are out of ' + '.');
-//   }
+function stateCheckingWithSwitch () {
+  switch (state) {
+    case story['Home']:
+       button1.textContent = storyChoice['Home']['button-one'];
+       button2.textContent = storyChoice['Home']['button-two'];
+      console.log('this is inside of the switch', story['Home']);
+      break;
+    case story['Wakeup']:
+      button1.textContent = storyChoice['Wakeup']['button-one'];
+       button2.textContent = storyChoice['Wakeup']['button-two'];
+      console.log('switch', story['Wakeup']);
+      break;
+    case story['Brakealarm']:
+      button1.textContent = storyChoice['Brakealarm']['button-one'];
+      button2.textContent = storyChoice['Brakealarm']['button-two']; 
+      break; 
+    case story['Kitchen']:
+      button1.textContent = storyChoice['Kitchen']['button-one'];
+      button2.textContent = storyChoice['Kitchen']['button-two']; 
+      break; 
+    case story['Shower']:
+      button1.textContent = storyChoice['Death']['button-one'];
+      button2.textContent = storyChoice['Death']['button-two']; 
+      break; 
+    case story['Tend Wound']:
+      button1.textContent = storyChoice['Death']['button-one'];
+      button2.textContent = storyChoice['Death']['button-two']; 
+      break;
+    case story['Lick Wound']:
+      button1.textContent = storyChoice['Nocomment']['button-one'];
+      button2.textContent = storyChoice['Nocomment']['button-two']; 
+      break;  
+    case story['Instant ramen']:
+      button1.textContent = storyChoice['Death']['button-one'];
+      button2.textContent = storyChoice['Death']['button-two']; 
+      break; 
+    default:
+      console.log('Sorry, we are out of ' + '.');
+  }
   
-// }
+}
 
 
 function init() {
