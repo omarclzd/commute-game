@@ -52,12 +52,28 @@ main div {
   flex-direction: row;
   justify-content: center;
   justify-items: center;
-  font-size: 3vmin;
+  font-size: 4vmin;
   margin: 5vw;
-  padding: 4vh 4vw;
-  border: solid;
+ 
+  border: none;
+  
+
   
   
+}
+
+div:hover {
+  color: #DA3E5D;
+  font-size: 5vmin;
+  font-weight: bold;
+  text-shadow: 3px 3px black, 
+               2px 2px black, 
+               3px 3px black;
+  
+}
+
+div:active {
+
 }
 
 footer {
@@ -105,4 +121,9 @@ footer {
 
   
 
+}
+
+#start:hover, #reset:hover {
+  font-weight: bold;
+  font-size: 4vmin;
 }

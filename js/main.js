@@ -177,6 +177,8 @@ function stateCheckingWithSwitch () {
       bodyEl.style.color = 'black';
       msgEl.style.color = 'black';
       headerEl.textContent = 'Fatality';
+      button1.style.fontSize = '50px';
+      button2.style.fontSize = '50px';
       break; 
     case story.tendWound:
       button1.textContent = storyChoice.death['button-one'];
@@ -184,6 +186,9 @@ function stateCheckingWithSwitch () {
       bodyEl.style.backgroundColor = '#8e160e';
       bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
+      headerEl.textContent = 'Fatality';
+      button1.style.fontSize = '50px';
+      button2.style.fontSize = '50px';
       break;
     case story.lickWound:
       button1.textContent = storyChoice.noComment['button-one'];
@@ -195,6 +200,9 @@ function stateCheckingWithSwitch () {
       bodyEl.style.backgroundColor = '#8e160e';
       bodyEl.style.color = 'black';
       msgEl.style.color = 'black';
+      headerEl.textContent = 'Fatality';
+      button1.style.fontSize = '50px';
+      button2.style.fontSize = '50px';
       break;
     case story.pancakes:
       button1.textContent = storyChoice.pancakes['button-one'];
@@ -206,6 +214,9 @@ function stateCheckingWithSwitch () {
       bodyEl.style.backgroundColor = '#8e160e';
       bodyEl.style.color = 'black';
       msgEl.style.color = 'black';
+      headerEl.textContent = 'Fatality';
+      button1.style.fontSize = '50px';
+      button2.style.fontSize = '50px';
       break;   
     default:
   } 
