@@ -6,7 +6,7 @@ html, * {
 body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 200px 1fr 150px;
+  grid-template-rows: 200px 1fr 1fr 150px;
   background-color: #212121;
   color: white;
   height: 100vh;
@@ -32,10 +32,16 @@ header {
 }
 
 section {
-  font-size: 3vmin;
+  font-size: 4vmin;
   text-align: center;
   color: #DA3E5D;
 }
+
+section p {
+  padding: 3vmin;
+} 
+
+
 
 main {
   display: flex;
@@ -52,14 +58,10 @@ main div {
   flex-direction: row;
   justify-content: center;
   justify-items: center;
+  text-align: center;
   font-size: 4vmin;
   margin: 5vw;
- 
   border: none;
-  
-
-  
-  
 }
 
 div:hover {
@@ -72,13 +74,11 @@ div:hover {
   
 }
 
-div:active {
 
-}
 
 footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #1e1b1b;
@@ -88,39 +88,20 @@ footer {
  
 }
 
-#start {
+#start, #reset {
   background-color: #444040;
   color: white;
   font-size: 3vmin;
   text-decoration: none;
   position: relative;
-  padding: .5vmin 3vmin;
-  margin-bottom: 1vmin;
-  padding: 0;
+  
+  margin: 2vmin;
   border: none;
   background: none;
   text-shadow: 1px 1px #DA3E5D, 
                2px 2px #DA3E5D, 
                2px 2px #DA3E5D;
   
-}
-
-#reset {
-  background-color: #444040;
-  color: white;
-  font-size: 3vmin;
-  text-decoration: none;
-  position: relative;
-  padding: .5vmin 2.6vmin;
-  padding: 0;
-  border: none;
-  background: none;
-  text-shadow: 1px 1px #DA3E5D, 
-               2px 2px #DA3E5D, 
-               2px 2px #DA3E5D;
-
-  
-
 }
 
 #start:hover, #reset:hover {

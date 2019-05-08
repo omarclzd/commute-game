@@ -1,11 +1,11 @@
 /*----- constants -----*/ 
 
 const story = {
-  standby: 'Get to work!',
+  standby: 'Go to work!',
 
   home: 'Alarm rings.',
 
-  wakeup: 'You are awake, but there is a funky smell.',
+  wakeup: 'You are awake, but somthing smells funky.',
 
   brakeAlarm: 'You smash your alarm in defiance and now your hand is bleeding furiously.',
 
@@ -19,7 +19,7 @@ const story = {
 
   pancakes: `The pancakes were deliciouse...look at the time! You don't want to be late!`,
 
-  instantRamen: `You put your ramen in the microwave for 5 mins, but forget to put some water in it. The ramen catches fire and your microwave explodes launching you through your apartment wall. You land on your neighbor's cat killing him. Your neighbor, raged in anger, shoots you dead.`,
+  instantRamen: `You put your ramen in the microwave for 5 mins, but forget to put some water in it. The ramen catches fire and your microwave explodes launching you through your apartment wall. You land on your neighbor's cat and killed him. Your neighbor, raged in anger, shoots you dead.`,
 
   headOut: 'You hurry out your apartment shirtless, and walk to your car. Your skin shines bright in the sunlight due to all the moisturizer you have been using. A nearby driver is blinded by your radian skin. He looses control of his car and runs you over',
 
@@ -37,7 +37,7 @@ const story = {
 const storyChoice = {
   home: {'button-one': 'Wake up', 'button-two': 'Brake alarm'},
 
-  wakeup: {'button-one': 'take cold shower', 'button-two': 'Skip shower and get breakfast'},
+  wakeup: {'button-one': 'take cold shower', 'button-two': 'skip shower and get breakfast'},
 
   brakeAlarm: {'button-one': 'tend wound', 'button-two': 'lick wound'},
 
@@ -54,6 +54,8 @@ const storyChoice = {
   death: {'button-one': 'You', 'button-two': 'Died'},
 
   noComment: {'button-one': 'No', 'button-two': 'Comment'},
+
+  
 
 };
 
@@ -173,22 +175,30 @@ function stateCheckingWithSwitch () {
     case story.shower:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two'];
-      bodyEl.style.backgroundColor = '#8e160e';
+      bodyEl.style.backgroundColor = '#a01e14';
       bodyEl.style.color = 'black';
       msgEl.style.color = 'black';
-      headerEl.textContent = 'Fatality';
-      button1.style.fontSize = '50px';
-      button2.style.fontSize = '50px';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none';
       break; 
     case story.tendWound:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two'];
-      bodyEl.style.backgroundColor = '#8e160e';
+      bodyEl.style.backgroundColor = '#a01e14';
       bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
-      headerEl.textContent = 'Fatality';
-      button1.style.fontSize = '50px';
-      button2.style.fontSize = '50px';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none';
       break;
     case story.lickWound:
       button1.textContent = storyChoice.noComment['button-one'];
@@ -197,12 +207,16 @@ function stateCheckingWithSwitch () {
     case story.instantRamen:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      bodyEl.style.backgroundColor = '#8e160e';
+      bodyEl.style.backgroundColor = '#a01e14';
       bodyEl.style.color = 'black';
       msgEl.style.color = 'black';
-      headerEl.textContent = 'Fatality';
-      button1.style.fontSize = '50px';
-      button2.style.fontSize = '50px';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none';
       break;
     case story.pancakes:
       button1.textContent = storyChoice.pancakes['button-one'];
@@ -211,12 +225,16 @@ function stateCheckingWithSwitch () {
     case story.headOut:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      bodyEl.style.backgroundColor = '#8e160e';
+      bodyEl.style.backgroundColor = '#a01e14';
       bodyEl.style.color = 'black';
       msgEl.style.color = 'black';
-      headerEl.textContent = 'Fatality';
-      button1.style.fontSize = '50px';
-      button2.style.fontSize = '50px';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none';
       break;   
     default:
   } 
