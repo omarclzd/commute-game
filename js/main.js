@@ -21,15 +21,17 @@ const story = {
 
   getReady: 'You go into your closet. Man you have so many options.',
 
-  instantRamen: `You put your ramen in the microwave for 5 mins, but forget to put some water in it. The ramen catches fire and your microwave explodes launching you through your apartment wall. You land on your neighbor's cat and killed him. Your neighbor, raged in anger, shoots you dead.`,
+  instantRamen: `You put your ramen in the microwave for 5 mins, but forget to put some water in it. The ramen catches fire and your microwave explodes launching you through your apartment wall. You land on your neighbor's cat and killed it. Your neighbor, raged in anger, shoots you dead.`,
 
   headOut: 'You hurry out your apartment shirtless, and walk to your car. Your skin shines bright in the sunlight due to all the moisturizer you have been using. A nearby driver is blinded by your radian skin. He looses control of his car and runs you over',
 
   slacksShirt: 'You look sharp! You head out and notice that its rainig. What should you ride today?',
 
+  shortAndT: 'You take no time getting ready and head out 15 minutes early. Awesome! Allthough cloudy, the weather is nice and cool. You want to take advantage of this and decide not to take the bus today.',
+
   busStop: `There are some friendly people at the bus stop today. The gentleman next to you says "good morning", however you are in a hurry and don't want to miss the bus.`,
 
-  startConvo: 'In the mid of the conversation the gentlemen notices the bus aproching. "We better get on the bus" he says. You have a pleasand ride so far but just one stop before yours an elderly lady gets in. All the seats are taken.',
+  startConvo: 'In the mid of the conversation the gentlemen notices the bus approaching. "We better get on the bus" he says. You have a pleasand ride so far but just one stop before yours an elderly lady gets in. All the seats are taken.',
 
   offerSeat: `"What a gentleman" she says. After you get to your stop you run of the bus and get to your building. You are boosting with confidence and check your watch. Awsome you're making great time!`,
 
@@ -37,9 +39,15 @@ const story = {
 
   greetAndConvo: `He starts off cold but you bring up a show that he is obsess with. You get a good laughter out of him. He's mood brightens up and offers to get launch for you. Great job!. You get to your office, but notice a maintenance worker just outside on a latter having some trouble changing a bulb.`,
 
-  ignoreMaitness: `You can't help everyone right? Congratulaions you made it to work! Hopefully your commute home will be as exciting.`,
+  ignoreMaitness: `You can't help everyone right? Congratulations you made it to work! Hopefully your commute home will be as exciting.`,
 
-  bikeRide: 'Bikeride promt',
+  bikeRide: 'You ride like a pro, almost gliding through the air. 15 minutes into your commute the heavens open up and rain starts pouring on you! You think about slowing down to be safe, but you can also go hard and get to work faster.',
+
+  slowDown: `You play it safe and hit your brakes to slow down. The car behind you, replies to his spouse telling her the road is dangerous and won’t be replying anymore. However, due to this last message, he fails to see you breaking and crashes into you. You are launched into the street, and hit your head. The impact kills you.`,
+
+  goHard: 'You put those legs to work and pedal like there is no tomorrow. As your approach a red light it turns green in your favor. You keep the pace and pedal hard as you go through it. An incoming car on the turning lane tries to beat the light and turns just as you are coming in hot. You t-bone the car launching you in the air. You hit your head on the ground as you land. You die from the impact.',
+
+  scooter: 'You take a shot at those scooters that have overtaken the city. As soon as you ride of your complex you panic and ride into oncoming traffic. An 18 wheeler that just so happen to have taken a detour that day, is not able to stop on time. He hits you killing you on the spot.',
 
   run: 'Run prompt',
 
@@ -65,7 +73,9 @@ const storyChoice = {
 
   busStop: {'button-one': 'ignore', 'button-two': 'start conversation'},
 
-  bikeRide: {'button-one': 'Bikechoice1', 'button-two': 'Bikechoice2'},
+  shortAndT: {'button-one': 'ride bike', 'button-two': 'ride scooter'},
+
+  bikeRide: {'button-one': 'be safe, slow down', 'button-two': 'go hard, power through it'},
 
   startConvo: {'button-one': 'offer your seat', 'button-two': 'do nothing, you will get off soon anyway'},
 
@@ -152,6 +162,18 @@ function handleBOne(evt) {
                 } else {
                   if (state === story.elevator) {
                     state = story.greetAndConvo;
+                  } else {
+                    if (state === story.getReady) {
+                      state = story.shortAndT;
+                    } else {
+                      if (state === story.shortAndT) {
+                        state = story.bikeRide;
+                      } else {
+                        if (state === story.bikeRide) {
+                          state = story.slowDown;
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -191,6 +213,14 @@ function handleBTwo(evt) {
               } else {
                 if (state === story.greetAndConvo) {
                   state = story.ignoreMaitness;
+                } else {
+                  if (state === story.bikeRide) {
+                    state = story.goHard;
+                  } else {
+                    if (state === story.shortAndT) {
+                      state = story.scooter;
+                    }
+                  }
                 }
               }
             }
@@ -288,6 +318,56 @@ function stateCheckingWithSwitch () {
       button1.textContent = storyChoice.slacksShirt['button-one'];
       button2.textContent = storyChoice.slacksShirt['button-two']; 
       break; 
+    case story.shortAndT:
+      button1.textContent = storyChoice.shortAndT['button-one'];
+      button2.textContent = storyChoice.shortAndT['button-two']; 
+      break; 
+    case story.bikeRide:
+      button1.textContent = storyChoice.bikeRide['button-one'];
+      button2.textContent = storyChoice.bikeRide['button-two']; 
+      break; 
+    case story.slowDown:
+      button1.textContent = storyChoice.death['button-one'];
+      button2.textContent = storyChoice.death['button-two']; 
+      bodyEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black';
+      msgEl.style.color = 'black';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none';
+      break;
+    case story.goHard:
+      button1.textContent = storyChoice.death['button-one'];
+      button2.textContent = storyChoice.death['button-two']; 
+      bodyEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black';
+      msgEl.style.color = 'black';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none'; 
+      break;
+    case story.scooter:
+      button1.textContent = storyChoice.death['button-one'];
+      button2.textContent = storyChoice.death['button-two']; 
+      bodyEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black';
+      msgEl.style.color = 'black';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none'; 
+      break;
     case story.headOut:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
