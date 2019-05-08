@@ -19,11 +19,23 @@ const story = {
 
   pancakes: `The pancakes were deliciouse...look at the time! You don't want to be late!`,
 
+  getReady: 'You go into your closet. Man you have so many options.',
+
   instantRamen: `You put your ramen in the microwave for 5 mins, but forget to put some water in it. The ramen catches fire and your microwave explodes launching you through your apartment wall. You land on your neighbor's cat and killed him. Your neighbor, raged in anger, shoots you dead.`,
 
   headOut: 'You hurry out your apartment shirtless, and walk to your car. Your skin shines bright in the sunlight due to all the moisturizer you have been using. A nearby driver is blinded by your radian skin. He looses control of his car and runs you over',
 
-  bussStop: 'BussStop promt',
+  slacksShirt: 'You look sharp! You head out and notice that its rainig. What should you ride today?',
+
+  busStop: `There are some friendly people at the bus stop today. The gentleman next to you says "good morning", however you are in a hurry and don't want to miss the bus.`,
+
+  startConvo: 'In the mid of the conversation the gentlemen notices the bus aproching. "We better get on the bus" he says. You have a pleasand ride so far but just one stop before yours an elderly lady gets in. All the seats are taken.',
+
+  offerSeat: `"What a gentleman" she says. After you get to your stop you run of the bus and get to your building. You are boosting with confidence and check your watch. Awsome you're making great time!`,
+
+  elevator: `Better be safe right? You don't want to pull anything. On the elevator you meet your bos. He seems to be in a bad mood today.`,
+
+  geetAndConvo: `He starts off cold but you bring up a show that he is obsess with. You get a good laughter out of him. He's mood brightens up and offers to get launch for you. Great job!. You get to your office.`,
 
   bikeRide: 'Bikeride promt',
 
@@ -45,11 +57,19 @@ const storyChoice = {
 
   pancakes: {'button-one': 'Get ready', 'button-two': 'Head out'},
 
-  bussStop: {'button-one': 'Bchoice1', 'button-two': 'Bchoice2'},
+  getReady: {'button-one': 'shorts and T-shirt', 'button-two': 'slacks and nice shirt'}, 
+
+  slacksShirt: {'button-one': 'bus', 'button-two': 'bicycle'}, 
+
+  busStop: {'button-one': 'ignore', 'button-two': 'start conversation'},
 
   bikeRide: {'button-one': 'Bikechoice1', 'button-two': 'Bikechoice2'},
 
-  run: {'button-one': 'Rchoice1', 'button-two': 'Rchoice2'},
+  startConvo: {'button-one': 'offer your seat', 'button-two': 'do nothing, you will get off soon anyway'},
+
+  offerSeat: {'button-one': 'take elevator', 'button-two': 'get a morning workou! take stairs.'},
+
+  elevator: {'button-one': 'greet and try conversing', 'button-two': `just greet, don't be noisy`},
 
   death: {'button-one': 'You', 'button-two': 'Died'},
 
@@ -111,6 +131,22 @@ function handleBOne(evt) {
       } else {
         if (state === story.kitchen) {
           state = story.pancakes;
+        } else {
+          if (state === story.pancakes) {
+            state = story.getReady;
+          } else {
+            if (state === story.slacksShirt) {
+              state = story.busStop;
+            } else {
+              if (state === story.startConvo) {
+                state = story.offerSeat;
+              } else {
+                if (state === story.offerSeat) {
+                  state = story.elevator;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -136,6 +172,14 @@ function handleBTwo(evt) {
         } else {
           if (state === story.pancakes) {
             state = story.headOut;
+          } else {
+            if (state === story.getReady) {
+            state = story.slacksShirt;
+            } else {
+              if (state === story.busStop) {
+                state = story.startConvo;
+              }
+            }
           }
         }
       }
@@ -222,6 +266,14 @@ function stateCheckingWithSwitch () {
       button1.textContent = storyChoice.pancakes['button-one'];
       button2.textContent = storyChoice.pancakes['button-two']; 
       break; 
+    case story.getReady:
+      button1.textContent = storyChoice.getReady['button-one'];
+      button2.textContent = storyChoice.getReady['button-two']; 
+      break; 
+    case story.slacksShirt:
+      button1.textContent = storyChoice.slacksShirt['button-one'];
+      button2.textContent = storyChoice.slacksShirt['button-two']; 
+      break; 
     case story.headOut:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
@@ -235,7 +287,23 @@ function stateCheckingWithSwitch () {
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       button1.style.textShadow = 'none';
       button2.style.textShadow = 'none';
-      break;   
+      break;  
+    case story.busStop:
+      button1.textContent = storyChoice.busStop['button-one'];
+      button2.textContent = storyChoice.busStop['button-two']; 
+      break;  
+    case story.startConvo:
+      button1.textContent = storyChoice.startConvo['button-one'];
+      button2.textContent = storyChoice.startConvo['button-two']; 
+      break;  
+    case story.offerSeat:
+      button1.textContent = storyChoice.offerSeat['button-one'];
+      button2.textContent = storyChoice.offerSeat['button-two']; 
+      break;  
+    case story.elevator:
+      button1.textContent = storyChoice.elevator['button-one'];
+      button2.textContent = storyChoice.elevator['button-two']; 
+      break;  
     default:
   } 
 }

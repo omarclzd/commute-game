@@ -34,6 +34,13 @@ Use function with if statement to render outcome of wrong choices.
 
 Repeat until user has reached the end of wrong paths, which will display a message stating the user has failed. 
 
+## Technologies Used
+
+JavaScrip, HTML, CSS
+
+## Getting Sarted 
+
+
 
 ## Authors
 
