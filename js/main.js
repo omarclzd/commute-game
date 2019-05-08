@@ -35,7 +35,9 @@ const story = {
 
   elevator: `Better be safe right? You don't want to pull anything. On the elevator you meet your bos. He seems to be in a bad mood today.`,
 
-  geetAndConvo: `He starts off cold but you bring up a show that he is obsess with. You get a good laughter out of him. He's mood brightens up and offers to get launch for you. Great job!. You get to your office.`,
+  greetAndConvo: `He starts off cold but you bring up a show that he is obsess with. You get a good laughter out of him. He's mood brightens up and offers to get launch for you. Great job!. You get to your office, but notice a maintenance worker just outside on a latter having some trouble changing a bulb.`,
+
+  ignoreMaitness: `You can't help everyone right? Congratulaions you made it to work! Hopefully your commute home will be as exciting.`,
 
   bikeRide: 'Bikeride promt',
 
@@ -71,6 +73,10 @@ const storyChoice = {
 
   elevator: {'button-one': 'greet and try conversing', 'button-two': `just greet, don't be noisy`},
 
+  greetAndConvo: {'button-one': 'offer to hold latter', 'button-two': `ignore and walk into your office`},
+
+  ignoreMaitness: {'button-one': 'You', 'button-two': 'Win!'},
+
   death: {'button-one': 'You', 'button-two': 'Died'},
 
   noComment: {'button-one': 'No', 'button-two': 'Comment'},
@@ -80,7 +86,7 @@ const storyChoice = {
 };
 
 /*----- app's state (variables) -----*/ 
-var winner, state;
+var state;
 
 
 /*----- cached element references -----*/ 
@@ -143,6 +149,10 @@ function handleBOne(evt) {
               } else {
                 if (state === story.offerSeat) {
                   state = story.elevator;
+                } else {
+                  if (state === story.elevator) {
+                    state = story.greetAndConvo;
+                  }
                 }
               }
             }
@@ -178,6 +188,10 @@ function handleBTwo(evt) {
             } else {
               if (state === story.busStop) {
                 state = story.startConvo;
+              } else {
+                if (state === story.greetAndConvo) {
+                  state = story.ignoreMaitness;
+                }
               }
             }
           }
@@ -303,6 +317,23 @@ function stateCheckingWithSwitch () {
     case story.elevator:
       button1.textContent = storyChoice.elevator['button-one'];
       button2.textContent = storyChoice.elevator['button-two']; 
+      break;  
+    case story.greetAndConvo:
+      button1.textContent = storyChoice.greetAndConvo['button-one'];
+      button2.textContent = storyChoice.greetAndConvo['button-two']; 
+      break;  
+    case story.ignoreMaitness:
+      button1.textContent = storyChoice.ignoreMaitness['button-one'];
+      button2.textContent = storyChoice.ignoreMaitness['button-two'];
+      bodyEl.style.color = 'yellow';
+      msgEl.style.color = 'white';
+      headerEl.textContent = 'Congratulations!';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px white, 3px 3px white, 5px 5px white';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none'; 
       break;  
     default:
   } 
