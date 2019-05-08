@@ -11,7 +11,7 @@ const story = {
 
   tendWound: 'You did not pay attention in first aid class. You die from blood loss.',
 
-  lickWound: 'You realize what you have been missing, and set off to be like your hero Edward Cullen. However, you did not make it to work.',
+  lickWound: 'Your blood is deliciouse and realize the path you want to follow. You brake from the chains of reality and set off to be like your hero Edward Cullen. However, you did not make it to work.',
 
   shower: 'While singing in the shower you atempt a power glide and break your neck in the process.',
 
@@ -31,13 +31,25 @@ const story = {
 
   busStop: `There are some friendly people at the bus stop today. The gentleman next to you says "good morning", however you are in a hurry and don't want to miss the bus.`,
 
-  startConvo: 'In the mid of the conversation the gentlemen notices the bus approaching. "We better get on the bus" he says. You have a pleasand ride so far but just one stop before yours an elderly lady gets in. All the seats are taken.',
+  ignorebus: `You ignore the gentleman, and pop your headphones on to catch up on an audio book you’ve been listening to before bed. However, unconsciously your brain is now trained to fall asleep to the audio book. Unwillingly, you fall asleep as the bus approaches. The gentleman notices you’re asleep but since you ignored him, he doesn't bother to wake you up. You stay asleep all morning and never make it to work.`,
+
+  uber: `Your uber arrives to pick you up. You guys hit it off great and talk about your favorite teams. He happens to be a fan of your team’s rival. Being a superfan, your instincts kick in.`,
+
+  talkDown: 'Due to his anger issues, your uber driver has a rage outburst and slams on the gas. The car accelerates rapidly without giving you time to react. At 140mph the car hits an oncoming car head on. You die on impact.',
+
+  stayQuiet: 'Your silence makes the driver talk even more, which distracts him from the road ahead. An 18 wheeler that happened to take a detour that day, swerves into your lane to avoid a pedestrian on a scooter that slipped on to  the road. Your driver, being distracted, does not notice and rams into the back of the trailer. You both die on impact.',
+
+  startConvo: 'In the mid of the conversation the gentlemen notices the bus approaching. "We better get on the bus" he says. You have a pleasant ride so far, but just one stop before yours an elderly lady gets in. All the seats are taken.',
+
+  ignoreLady: '',
 
   offerSeat: `"What a gentleman" she says. After you get to your stop you run of the bus and get to your building. You are boosting with confidence and check your watch. Awsome you're making great time!`,
 
+  takeStairs: `Full of confidence you stride through the stairs looking forward to your day. You think to yourself “this is great, I should take the stairs more oft...” before you even finish your thought, you trip on the last step before your floor and jam your knee on the step's edge. You scream in pain and as you try to get up, your other foot slips and you plow down the stairway. As you fall, your ribcage brakes and poncuters one of your lungs. You feel your life slipping away, as you agonzie on the floor below yours. Alone and cold, you think to yourself, “So much for healthy choices”.`,
+
   elevator: `Better be safe right? You don't want to pull anything. On the elevator you meet your bos. He seems to be in a bad mood today.`,
 
-  greetAndConvo: `He starts off cold but you bring up a show that he is obsess with. You get a good laughter out of him. He's mood brightens up and offers to get launch for you. Great job!. You get to your office, but notice a maintenance worker just outside on a latter having some trouble changing a bulb.`,
+  greetAndConvo: `He starts off cold but you bring up a show that he is obsess with. You get a good laughter out of him. He's mood brightens up and offers to get launch for you. Great job!. You get to your office, but notice a maintenance worker just outside on a latter having some trouble with a ceiling fan.`,
 
   ignoreMaitness: `You can't help everyone right? Congratulations you made it to work! Hopefully your commute home will be as exciting.`,
 
@@ -49,7 +61,7 @@ const story = {
 
   scooter: 'You take a shot at those scooters that have overtaken the city. As soon as you ride of your complex you panic and ride into oncoming traffic. An 18 wheeler that just so happen to have taken a detour that day, is not able to stop on time. He hits you killing you on the spot.',
 
-  run: 'Run prompt',
+  holdLatter: `You are on a roll, and decide to help a soul in need. While you hold the latter, you ask the maintenance worker about his day. He turns down to look at you and loses his balance. Trying to get a hold of something he grabs onto the ceiling fan, which is not secured properly. The fan fails to hold the workers weight and comes down with him. On instinct you move to try to catch the worker as he falls, but you don’t make it in time. However, your heroic attempt moves you into the fans trajectory and hits you right on the head. You die from the hit.`,
 
   death: 'You failed to get to work.'
 
@@ -57,21 +69,23 @@ const story = {
 };
 
 const storyChoice = {
-  home: {'button-one': 'Wake up', 'button-two': 'Brake alarm'},
+  home: {'button-one': 'wake up', 'button-two': 'brake alarm'},
 
   wakeup: {'button-one': 'take cold shower', 'button-two': 'skip shower and get breakfast'},
 
   brakeAlarm: {'button-one': 'tend wound', 'button-two': 'lick wound'},
 
-  kitchen: {'button-one': 'Pancakes', 'button-two': 'Instant ramen'},
+  kitchen: {'button-one': 'pancakes', 'button-two': 'instant ramen'},
 
-  pancakes: {'button-one': 'Get ready', 'button-two': 'Head out'},
+  pancakes: {'button-one': 'get ready', 'button-two': 'head out'},
 
   getReady: {'button-one': 'shorts and T-shirt', 'button-two': 'slacks and nice shirt'}, 
 
-  slacksShirt: {'button-one': 'bus', 'button-two': 'bicycle'}, 
+  slacksShirt: {'button-one': 'bus', 'button-two': 'uber'}, 
 
   busStop: {'button-one': 'ignore', 'button-two': 'start conversation'},
+
+  uber: {'button-one': 'talk down on his team', 'button-two': 'be respectfull, stay quiet'},
 
   shortAndT: {'button-one': 'ride bike', 'button-two': 'ride scooter'},
 
@@ -79,7 +93,7 @@ const storyChoice = {
 
   startConvo: {'button-one': 'offer your seat', 'button-two': 'do nothing, you will get off soon anyway'},
 
-  offerSeat: {'button-one': 'take elevator', 'button-two': 'get a morning workou! take stairs.'},
+  offerSeat: {'button-one': 'take elevator', 'button-two': 'get a morning workout! take stairs.'},
 
   elevator: {'button-one': 'greet and try conversing', 'button-two': `just greet, don't be noisy`},
 
@@ -171,6 +185,18 @@ function handleBOne(evt) {
                       } else {
                         if (state === story.bikeRide) {
                           state = story.slowDown;
+                        } else {
+                          if (state === story.uber) {
+                            state = story.talkDown;
+                          } else {
+                            if (state === story.busStop) {
+                              state = story.ignorebus;
+                            } else {
+                              if (state === story.greetAndConvo) {
+                                state = story.holdLatter;
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -219,6 +245,18 @@ function handleBTwo(evt) {
                   } else {
                     if (state === story.shortAndT) {
                       state = story.scooter;
+                    } else {
+                      if (state === story.slacksShirt) {
+                        state = story.uber;
+                      } else {
+                        if (state === story.uber) {
+                          state = story.stayQuiet;
+                        } else {
+                          if (state === story.offerSeat) {
+                            state = story.takeStairs;
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -381,7 +419,39 @@ function stateCheckingWithSwitch () {
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       button1.style.textShadow = 'none';
       button2.style.textShadow = 'none';
+      break;
+    case story.uber:
+      button1.textContent = storyChoice.uber['button-one'];
+      button2.textContent = storyChoice.uber['button-two']; 
       break;  
+    case story.talkDown:
+      button1.textContent = storyChoice.death['button-one'];
+      button2.textContent = storyChoice.death['button-two']; 
+      bodyEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black';
+      msgEl.style.color = 'black';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none';
+      break; 
+    case story.stayQuiet:
+      button1.textContent = storyChoice.death['button-one'];
+      button2.textContent = storyChoice.death['button-two']; 
+      bodyEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black';
+      msgEl.style.color = 'black';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none';
+      break; 
     case story.busStop:
       button1.textContent = storyChoice.busStop['button-one'];
       button2.textContent = storyChoice.busStop['button-two']; 
@@ -390,10 +460,30 @@ function stateCheckingWithSwitch () {
       button1.textContent = storyChoice.startConvo['button-one'];
       button2.textContent = storyChoice.startConvo['button-two']; 
       break;  
+    case story.ignorebus:
+      button1.textContent = storyChoice.noComment['button-one'];
+      button2.textContent = storyChoice.noComment['button-two']; 
+      headerEl.textContent = 'To Bad';
+      break;  
     case story.offerSeat:
       button1.textContent = storyChoice.offerSeat['button-one'];
       button2.textContent = storyChoice.offerSeat['button-two']; 
       break;  
+    case story.takeStairs:
+      button1.textContent = storyChoice.death['button-one'];
+      button2.textContent = storyChoice.death['button-two']; 
+      bodyEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black';
+      msgEl.style.color = 'black';
+      msgEl.style.fontSize = '3vmin';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none';
+      break; 
     case story.elevator:
       button1.textContent = storyChoice.elevator['button-one'];
       button2.textContent = storyChoice.elevator['button-two']; 
@@ -402,6 +492,21 @@ function stateCheckingWithSwitch () {
       button1.textContent = storyChoice.greetAndConvo['button-one'];
       button2.textContent = storyChoice.greetAndConvo['button-two']; 
       break;  
+    case story.holdLatter:
+      button1.textContent = storyChoice.death['button-one'];
+      button2.textContent = storyChoice.death['button-two']; 
+      bodyEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black';
+      msgEl.style.color = 'black';
+      msgEl.style.fontSize = '3vmin';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = 'none';
+      button2.style.textShadow = 'none';
+      break; 
     case story.ignoreMaitness:
       button1.textContent = storyChoice.ignoreMaitness['button-one'];
       button2.textContent = storyChoice.ignoreMaitness['button-two'];
