@@ -7,35 +7,38 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 200px 1fr 1fr 150px;
-  background-color: #212121;
+  background-color: #212121; 
   color: white;
   height: 100vh;
   margin: 0;
-  /* display: flex; */
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
+
 }
+
 
 header {
   display: flex;
   background-color: #1e1b1b;
   font-size: 10vmin;
-  text-shadow: 1px 1px #DA3E5D, 
-               3px 3px #DA3E5D, 
-               5px 5px #DA3E5D;
+  text-shadow: 1px 1px black, 
+               3px 3px #00AFF1, 
+               5px 5px #00AFF1;
   align-items: center;
   justify-content: center;
   height: 200px;
-
-
 }
 
 section {
-  font-size: 4vmin;
+  font-size: 3.5vmin;
   text-align: center;
-  color: #DA3E5D;
+  color: black;
+  border-top: 8px solid;
+  border-bottom: 8px solid;
+  height: 210px;
+  background-color: #00AFF1;
 }
+
 
 section p {
   padding: 3vmin;
@@ -47,9 +50,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 1px 1px #DA3E5D, 
-               2px 2px #DA3E5D, 
-               2px 2px #DA3E5D;
+  text-shadow: 1px 1px black, 
+               2px 2px #00AFF1, 
+               3px 3px #00AFF1;
   
 }
 
@@ -65,13 +68,8 @@ main div {
 }
 
 div:hover {
-  color: #DA3E5D;
-  font-size: 5vmin;
+  font-size: 4.2vmin;
   font-weight: bold;
-  text-shadow: 3px 3px black, 
-               2px 2px black, 
-               3px 3px black;
-  
 }
 
 
@@ -98,9 +96,9 @@ footer {
   margin: 2vmin;
   border: none;
   background: none;
-  text-shadow: 1px 1px #DA3E5D, 
-               2px 2px #DA3E5D, 
-               2px 2px #DA3E5D;
+  text-shadow: 1px 1px black, 
+               2px 2px #00AFF1, 
+               2px 2px #00AFF1;
   
 }
 

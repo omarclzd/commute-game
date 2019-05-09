@@ -115,6 +115,7 @@ var state;
 
 /*----- cached element references -----*/ 
 const msgEl = document.getElementById('msg');
+const secEl = document.querySelector('section');
 const bodyEl = document.querySelector('body');
 const headerEl = document.querySelector('header');
 const footerEl = document.querySelector('footer');
@@ -273,7 +274,6 @@ function handleBTwo(evt) {
 
 
 
-
 function render() {
   msgEl.textContent = state;
   stateCheckingWithSwitch()
@@ -301,21 +301,7 @@ function stateCheckingWithSwitch () {
     case story.shower:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two'];
-      bodyEl.style.backgroundColor = '#a01e14';
-      bodyEl.style.color = 'black';
-      msgEl.style.color = 'black';
-      headerEl.textContent = 'Game Over';
-      headerEl.style.fontWeight = 'bold';
-      button1.style.fontSize = '40px';
-      button2.style.fontSize = '40px';
-      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
-      button1.style.textShadow = 'none';
-      button2.style.textShadow = 'none';
-      break; 
-    case story.tendWound:
-      button1.textContent = storyChoice.death['button-one'];
-      button2.textContent = storyChoice.death['button-two'];
-      bodyEl.style.backgroundColor = '#a01e14';
+      secEl.style.backgroundColor = '#a01e14';
       bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
       headerEl.textContent = 'Game Over';
@@ -323,8 +309,22 @@ function stateCheckingWithSwitch () {
       button1.style.fontSize = '40px';
       button2.style.fontSize = '40px';
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
-      button1.style.textShadow = 'none';
-      button2.style.textShadow = 'none';
+      button1.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';;
+      button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      break; 
+    case story.tendWound:
+      button1.textContent = storyChoice.death['button-one'];
+      button2.textContent = storyChoice.death['button-two'];
+      secEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black'; 
+      msgEl.style.color = 'black';
+      headerEl.textContent = 'Game Over';
+      headerEl.style.fontWeight = 'bold';
+      button1.style.fontSize = '40px';
+      button2.style.fontSize = '40px';
+      headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
+      button1.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';;
+      button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       break;
     case story.lickWound:
       button1.textContent = storyChoice.noComment['button-one'];
@@ -333,16 +333,16 @@ function stateCheckingWithSwitch () {
     case story.instantRamen:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      bodyEl.style.backgroundColor = '#a01e14';
-      bodyEl.style.color = 'black';
+      secEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
       headerEl.textContent = 'Game Over';
       headerEl.style.fontWeight = 'bold';
       button1.style.fontSize = '40px';
       button2.style.fontSize = '40px';
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
-      button1.style.textShadow = 'none';
-      button2.style.textShadow = 'none';
+      button1.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';;
+      button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       break;
     case story.pancakes:
       button1.textContent = storyChoice.pancakes['button-one'];
@@ -367,58 +367,58 @@ function stateCheckingWithSwitch () {
     case story.slowDown:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      bodyEl.style.backgroundColor = '#a01e14';
-      bodyEl.style.color = 'black';
+      secEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
       headerEl.textContent = 'Game Over';
       headerEl.style.fontWeight = 'bold';
       button1.style.fontSize = '40px';
       button2.style.fontSize = '40px';
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
-      button1.style.textShadow = 'none';
-      button2.style.textShadow = 'none';
+      button1.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';;
+      button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       break;
     case story.goHard:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      bodyEl.style.backgroundColor = '#a01e14';
-      bodyEl.style.color = 'black';
+      secEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
       headerEl.textContent = 'Game Over';
       headerEl.style.fontWeight = 'bold';
       button1.style.fontSize = '40px';
       button2.style.fontSize = '40px';
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
-      button1.style.textShadow = 'none';
-      button2.style.textShadow = 'none'; 
+      button1.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';;
+      button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       break;
     case story.scooter:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      bodyEl.style.backgroundColor = '#a01e14';
-      bodyEl.style.color = 'black';
+      secEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
       headerEl.textContent = 'Game Over';
       headerEl.style.fontWeight = 'bold';
       button1.style.fontSize = '40px';
       button2.style.fontSize = '40px';
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
-      button1.style.textShadow = 'none';
-      button2.style.textShadow = 'none'; 
+      button1.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';;
+      button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       break;
     case story.headOut:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      bodyEl.style.backgroundColor = '#a01e14';
-      bodyEl.style.color = 'black';
+      secEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
       headerEl.textContent = 'Game Over';
       headerEl.style.fontWeight = 'bold';
       button1.style.fontSize = '40px';
       button2.style.fontSize = '40px';
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
-      button1.style.textShadow = 'none';
-      button2.style.textShadow = 'none';
+      button1.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';;
+      button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       break;
     case story.uber:
       button1.textContent = storyChoice.uber['button-one'];
@@ -427,30 +427,30 @@ function stateCheckingWithSwitch () {
     case story.talkDown:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      bodyEl.style.backgroundColor = '#a01e14';
-      bodyEl.style.color = 'black';
+      secEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
       headerEl.textContent = 'Game Over';
       headerEl.style.fontWeight = 'bold';
       button1.style.fontSize = '40px';
       button2.style.fontSize = '40px';
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
-      button1.style.textShadow = 'none';
-      button2.style.textShadow = 'none';
+      button1.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';;
+      button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       break; 
     case story.stayQuiet:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      bodyEl.style.backgroundColor = '#a01e14';
-      bodyEl.style.color = 'black';
+      secEl.style.backgroundColor = '#a01e14';
+      bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
       headerEl.textContent = 'Game Over';
       headerEl.style.fontWeight = 'bold';
       button1.style.fontSize = '40px';
       button2.style.fontSize = '40px';
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
-      button1.style.textShadow = 'none';
-      button2.style.textShadow = 'none';
+      button1.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';;
+      button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       break; 
     case story.busStop:
       button1.textContent = storyChoice.busStop['button-one'];
@@ -472,17 +472,17 @@ function stateCheckingWithSwitch () {
     case story.takeStairs:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      bodyEl.style.backgroundColor = '#a01e14';
-      bodyEl.style.color = 'black';
+      secEl.style.backgroundColor = '#a01e14';
+      secEl.style.fontSize = '2.5vmin';
+      bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
-      msgEl.style.fontSize = '3vmin';
       headerEl.textContent = 'Game Over';
       headerEl.style.fontWeight = 'bold';
       button1.style.fontSize = '40px';
       button2.style.fontSize = '40px';
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
-      button1.style.textShadow = 'none';
-      button2.style.textShadow = 'none';
+      button1.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';;
+      button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       break; 
     case story.elevator:
       button1.textContent = storyChoice.elevator['button-one'];
@@ -495,23 +495,24 @@ function stateCheckingWithSwitch () {
     case story.holdLatter:
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
-      bodyEl.style.backgroundColor = '#a01e14';
-      bodyEl.style.color = 'black';
+      secEl.style.backgroundColor = '#a01e14';
+      secEl.style.fontSize = '2.5vmin';
+      bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
-      msgEl.style.fontSize = '3vmin';
       headerEl.textContent = 'Game Over';
       headerEl.style.fontWeight = 'bold';
       button1.style.fontSize = '40px';
       button2.style.fontSize = '40px';
       headerEl.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
-      button1.style.textShadow = 'none';
-      button2.style.textShadow = 'none';
+      button1.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';;
+      button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       break; 
     case story.ignoreMaitness:
       button1.textContent = storyChoice.ignoreMaitness['button-one'];
       button2.textContent = storyChoice.ignoreMaitness['button-two'];
-      bodyEl.style.color = 'yellow';
-      msgEl.style.color = 'white';
+      secEl.style.backgroundColor = 'yellow';
+      bodyEl.style.color = 'yellow'; 
+      msgEl.style.color = 'black';
       headerEl.textContent = 'Congratulations!';
       headerEl.style.fontWeight = 'bold';
       button1.style.fontSize = '40px';
