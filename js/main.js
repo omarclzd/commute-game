@@ -62,10 +62,10 @@ const story = {
   holdLatter: `You are on a roll, and decide to help a soul in need. While you hold the ladder, you ask the maintenance worker about his day. He turns down to look at you and loses his balance. Trying to get a hold of something he grabs onto the ceiling fan, which is not secured properly. The fan fails to hold the workers weight and comes down with him. On instinct you move to try to catch the worker as he falls, but you don’t make it in time. However, your heroic attempt moves you into the fans trajectory and hits you right on the head. You die from the hit.`,
 
   death: 'You failed to get to work.'
+};
 
-  };
 
-  const storyChoice = {
+const storyChoice = {
   home: {'button-one': 'wake up', 'button-two': 'break alarm'},
 
   wakeup: {'button-one': 'take cold shower', 'button-two': 'skip shower and get breakfast'},
@@ -99,15 +99,13 @@ const story = {
   death: {'button-one': 'You', 'button-two': 'Died'},
 
   noComment: {'button-one': 'No', 'button-two': 'Comment'},
-
-
 };
 
 /*----- app's state (variables) -----*/ 
 var state;
 
-
 /*----- cached element references -----*/ 
+
 const msgEl = document.getElementById('msg');
 const secEl = document.querySelector('section');
 const bodyEl = document.querySelector('body');
@@ -115,31 +113,30 @@ const headerEl = document.querySelector('header');
 const footerEl = document.querySelector('footer');
 const button1 = document.getElementById('button-one');
 const button2 = document.getElementById('button-two');
-//const buttons = document.getElementsByClassName('')
-
 
 /*----- event listeners -----*/ 
+
 document.getElementById('button-one').addEventListener('click', handleBOne);
 document.getElementById('button-two').addEventListener('click', handleBTwo);
 document.getElementById('start').addEventListener('click', handleStart);
 document.getElementById('reset').addEventListener('click', handleReset);
 
 /*----- functions -----*/
+
 init();
 
+
 function handleStart(evt) {
-  
   if (state === story.standby) {
      state = story.home;
-    
   };
   render();
 }
 
+
 function handleReset(evt) {
   window.location.reload();
 }
-
 
 
 function handleBOne(evt) {
@@ -200,9 +197,8 @@ function handleBOne(evt) {
       }
     }
   }
-  render();
-  
 
+  render();
 }
 
 
@@ -262,8 +258,8 @@ function handleBTwo(evt) {
       }
     }
   }
+
   render();
-  
 }
 
 

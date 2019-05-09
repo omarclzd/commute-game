@@ -13,9 +13,7 @@ body {
   margin: 0;
   justify-content: center;
   align-items: center;
-
 }
-
 
 header {
   display: flex;
@@ -39,12 +37,9 @@ section {
   background-color: #00AFF1;
 }
 
-
 section p {
   padding: 3vmin;
 } 
-
-
 
 main {
   display: flex;
@@ -53,7 +48,6 @@ main {
   text-shadow: 1px 1px black, 
                2px 2px #00AFF1, 
                3px 3px #00AFF1;
-  
 }
 
 main div {
@@ -72,8 +66,6 @@ div:hover {
   font-weight: bold;
 }
 
-
-
 footer {
   display: flex;
   flex-direction: row;
@@ -81,9 +73,6 @@ footer {
   align-items: center;
   background-color: #1e1b1b;
   height: 150px;
-  
-  
- 
 }
 
 #start, #reset {
@@ -92,14 +81,12 @@ footer {
   font-size: 3vmin;
   text-decoration: none;
   position: relative;
-  
   margin: 2vmin;
   border: none;
   background: none;
   text-shadow: 1px 1px black, 
                2px 2px #00AFF1, 
                2px 2px #00AFF1;
-  
 }
 
 #start:hover, #reset:hover {
