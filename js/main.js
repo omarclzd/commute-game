@@ -66,6 +66,8 @@ const story = {
 
 
 const storyChoice = {
+  standby: {'button-one': 'Chose', 'button-two': 'Wisley'},
+
   home: {'button-one': 'wake up', 'button-two': 'break alarm'},
 
   wakeup: {'button-one': 'take cold shower', 'button-two': 'skip shower and get breakfast'},
@@ -272,6 +274,10 @@ function render() {
 
 function stateCheckingWithSwitch () {
   switch (state) {
+    case story.standby:
+      button1.textContent = storyChoice.standby['button-one'];
+      button2.textContent = storyChoice.standby['button-two'];
+    break;
     case story.home:
       button1.textContent = storyChoice.home['button-one'];
       button2.textContent = storyChoice.home['button-two'];
@@ -400,6 +406,7 @@ function stateCheckingWithSwitch () {
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
       secEl.style.backgroundColor = '#a01e14';
+      secEl.style.fontSize = '3vmin';
       bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
       headerEl.textContent = 'Game Over';
