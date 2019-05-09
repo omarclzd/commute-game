@@ -94,7 +94,7 @@ const storyChoice = {
 
   elevator: {'button-one': 'offer to hold ladder', 'button-two': `ignore and walk into your office`},
 
-  ignoreMaitness: {'button-one': 'You', 'button-two': 'Win!'},
+  winner: {'button-one': 'You', 'button-two': 'Win!'},
 
   death: {'button-one': 'You', 'button-two': 'Died'},
 
@@ -509,8 +509,8 @@ function stateCheckingWithSwitch () {
       button2.style.textShadow = '1px 1px #a01e14, 3px 3px #a01e14, 5px 5px #a01e14';
       break; 
     case story.ignoreMaitness:
-      button1.textContent = storyChoice.ignoreMaitness['button-one'];
-      button2.textContent = storyChoice.ignoreMaitness['button-two'];
+      button1.textContent = storyChoice.winner['button-one'];
+      button2.textContent = storyChoice.winner['button-two'];
       secEl.style.backgroundColor = 'yellow';
       bodyEl.style.color = 'yellow'; 
       msgEl.style.color = 'black';
