@@ -47,9 +47,7 @@ const story = {
 
   takeStairs: `Full of confidence you stride through the stairs looking forward to your day. You think to yourself “this is great, I should take the stairs more oft...” before you even finish your thought, you trip on the last step before your floor and jam your knee on the step edge. You scream in pain and as you try to get up, your other foot slips and you plow down the stairway. As you fall, your ribcage brakes and poncuters one of your lungs. You feel your life slipping away, as you agonzie on the floor below yours. Alone and cold, you think to yourself, “So much for healthy choices”.`,
 
-  elevator: `Better be safe right? You don't want to pull anything. On the elevator you meet your boss. He seems to be in a bad mood today.`,
-
-  greetAndConvo: `He starts off cold but you bring up a show that he is obsessed with. You get a good laughter out of him. He's mood brightens up and offers to get launch for you. Great job!. You get to your office, but notice a maintenance worker just outside on a latter having some trouble with a ceiling fan.`,
+  elevator: `Better be safe right? You don't want to pull anything. You get to your office, but notice a maintenance worker just outside on a ladder having some trouble with a ceiling fan.`,
 
   ignoreMaitness: `You can't help everyone right? Congratulations you made it to work! Hopefully your commute home will be as exciting.`,
 
@@ -61,7 +59,7 @@ const story = {
 
   scooter: 'You take a shot at those scooters that have overtaken the city. As soon as you ride of your complex you panic and ride into oncoming traffic. An 18 wheeler that just so happen to have taken a detour that day, is not able to stop on time. He hits you killing you on the spot.',
 
-  holdLatter: `You are on a roll, and decide to help a soul in need. While you hold the latter, you ask the maintenance worker about his day. He turns down to look at you and loses his balance. Trying to get a hold of something he grabs onto the ceiling fan, which is not secured properly. The fan fails to hold the workers weight and comes down with him. On instinct you move to try to catch the worker as he falls, but you don’t make it in time. However, your heroic attempt moves you into the fans trajectory and hits you right on the head. You die from the hit.`,
+  holdLatter: `You are on a roll, and decide to help a soul in need. While you hold the ladder, you ask the maintenance worker about his day. He turns down to look at you and loses his balance. Trying to get a hold of something he grabs onto the ceiling fan, which is not secured properly. The fan fails to hold the workers weight and comes down with him. On instinct you move to try to catch the worker as he falls, but you don’t make it in time. However, your heroic attempt moves you into the fans trajectory and hits you right on the head. You die from the hit.`,
 
   death: 'You failed to get to work.'
 
@@ -94,9 +92,7 @@ const story = {
 
   offerSeat: {'button-one': 'take elevator', 'button-two': 'get a morning workout! take stairs.'},
 
-  elevator: {'button-one': 'greet and try conversing', 'button-two': `just greet, don't be noisy`},
-
-  greetAndConvo: {'button-one': 'offer to hold latter', 'button-two': `ignore and walk into your office`},
+  elevator: {'button-one': 'offer to hold ladder', 'button-two': `ignore and walk into your office`},
 
   ignoreMaitness: {'button-one': 'You', 'button-two': 'Win!'},
 
@@ -174,7 +170,7 @@ function handleBOne(evt) {
                   state = story.elevator;
                 } else {
                   if (state === story.elevator) {
-                    state = story.greetAndConvo;
+                    state = story.holdLatter;
                   } else {
                     if (state === story.getReady) {
                       state = story.shortAndT;
@@ -190,11 +186,7 @@ function handleBOne(evt) {
                           } else {
                             if (state === story.busStop) {
                               state = story.ignorebus;
-                            } else {
-                              if (state === story.greetAndConvo) {
-                                state = story.holdLatter;
-                              }
-                            }
+                            } 
                           }
                         }
                       }
@@ -236,7 +228,7 @@ function handleBTwo(evt) {
               if (state === story.busStop) {
                 state = story.startConvo;
               } else {
-                if (state === story.greetAndConvo) {
+                if (state === story.elevator) {
                   state = story.ignoreMaitness;
                 } else {
                   if (state === story.bikeRide) {
@@ -504,10 +496,6 @@ function stateCheckingWithSwitch () {
     case story.elevator:
       button1.textContent = storyChoice.elevator['button-one'];
       button2.textContent = storyChoice.elevator['button-two']; 
-      break;  
-    case story.greetAndConvo:
-      button1.textContent = storyChoice.greetAndConvo['button-one'];
-      button2.textContent = storyChoice.greetAndConvo['button-two']; 
       break;  
     case story.holdLatter:
       button1.textContent = storyChoice.death['button-one'];
