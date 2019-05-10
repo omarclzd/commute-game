@@ -28,17 +28,17 @@ header {
 }
 
 section {
-  font-size: 3.5vmin;
+  font-size: 4vmin;
   text-align: center;
   color: black;
   border-top: 8px solid;
   border-bottom: 8px solid;
-  height: 210px;
+  height: 250px;
   background-color: #00AFF1;
 }
 
 section p {
-  padding: 3vmin;
+ padding: 0 2vmin;
 } 
 
 main {
@@ -57,6 +57,7 @@ main div {
   justify-items: center;
   text-align: center;
   font-size: 4vmin;
+  height: 10px;
   margin: 5vw;
   border: none;
 }
@@ -73,6 +74,7 @@ footer {
   align-items: center;
   background-color: #1e1b1b;
   height: 150px;
+  padding-bottom: 40px;
 }
 
 #start, #reset {

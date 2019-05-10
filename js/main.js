@@ -23,7 +23,7 @@ const story = {
 
   instantRamen: `You put your ramen in the microwave for 5 mins, but forget to put some water in it. The ramen catches fire and your microwave explodes launching you through your apartment wall. You land on your neighbor's cat and kill it. Your neighbor, raged in anger, shoots you dead.`,
 
-  headOut: 'You hurry out your apartment just wearing underware since thats how you like to sleep. Your skin shines bright in the sunlight due to all the moisturizer you have been using. A nearby driver is blinded by your radian skin. He loses control of his car and runs you over.',
+  headOut: `You hurry out your apartment just wearing underwear since that’s how you like to sleep. Your skin shines bright in the sunlight due to all the moisturizer you have been using. A nearby driver is blinded by your radiant skin. He loses control of his car and runs you over.`,
 
   slacksShirt: `You look sharp! You head out and notice that it's raining. What should you ride today?`,
 
@@ -33,19 +33,19 @@ const story = {
 
   ignorebus: `You ignore the gentleman, and pop your headphones on to catch up on an audio book you’ve been listening to before bed. However, unconsciously your brain is now trained to fall asleep to the audio book. Unwillingly, you fall asleep as the bus approaches. The gentleman notices you’re asleep but since you ignored him, he doesn't bother to wake you up. You stay asleep all morning and never make it to work.`,
 
-  uber: `Your uber arrives to pick you up. You guys hit it off great and talk about your favorite teams. He happens to be a fan of your team’s rival. Being a superfan, your instincts kick in.`,
+  uber: `Your uber arrives to pick you up. You guys hit it off great and talk about your favorite sports teams. He happens to be a fan of your team’s rival. Being a superfan, your instincts kick in.`,
 
   talkDown: 'Due to his anger issues, your uber driver has a rage outburst and slams on the gas. The car accelerates rapidly without giving you time to react. At 140mph the car hits an oncoming car head on. You die on impact.',
 
-  stayQuiet: 'Your silence makes the driver talk even more, which distracts him from the road ahead. An 18 wheeler that happened to take a detour that day, swerves into your lane to avoid a pedestrian on a scooter that slipped on to  the road. Your driver, being distracted, does not notice and rams into the back of the trailer. You both die on impact.',
+  stayQuiet: 'Your silence makes the driver talk even more, which distracts him from the road ahead. An 18-wheeler that happened to take a detour that day, swerves into your lane to avoid a pedestrian on a scooter that slipped on to  the road. Your driver, being distracted, does not notice and rams into the back of the trailer. You both die on impact.',
 
-  startConvo: 'In the mid of the conversation the gentlemen notices the bus approaching. "We better get on the bus" he says. You have a pleasant ride so far, but just one stop before yours an elderly lady gets in. All the seats are taken.',
+  startConvo: 'In mid conversation, the gentlemen notices the bus approaching. "We better get on the bus" he says. You have a pleasant ride so far, but just one stop before yours an elderly lady gets in. All the seats are taken.',
 
-  ignoreLady: `Just so happens that the gods were taking a look at your life today. One had bet that you were a good person and would always to the right thing. The other suggested otherwize. If good, you would have been given health and prosperity, but if bad, the wrath of the gods would be bestowed upon you without mercy. The outcome: An explosion near by shot out a steel beam reaching mach 1. The beam pierced the bus’s walls like butter and impaled you through the heart. No one else was hurt.`,
+  ignoreLady: `Just so happens that the gods were taking a look at your life today. One had bet that you were a good person and would always do the right thing. The other suggested otherwise. If good, you would have been given health and prosperity, but if bad, the wrath of the gods would be bestowed upon you without mercy. The outcome: An explosion near by shot out a steel beam reaching mach 1. The beam pierced the bus’s walls like butter and impaled you through the heart. No one else was hurt.`,
 
-  offerSeat: `"What a gentleman" she says. After you get to your stop you run of the bus and get to your building. You are boosting with confidence and check your watch. Awesome you're making great time!`,
+  offerSeat: `"What a gentleman" she says. After you get to your stop you run of the bus and get to your building. You are boosting with confidence and check your watch. Awesome, you're making great time!`,
 
-  takeStairs: `Full of confidence you stride through the stairs looking forward to your day. You think to yourself “this is great, I should take the stairs more oft...” before you even finish your thought, you trip on the last step before your floor and jam your knee on the step edge. You scream in pain and as you try to get up, your other foot slips and you plow down the stairway. As you fall, your ribcage brakes and poncuters one of your lungs. You feel your life slipping away, as you agonzie on the floor below yours. Alone and cold, you think to yourself, “So much for healthy choices”.`,
+  takeStairs: `Full of confidence you stride through the stairs looking forward to your day. You think to yourself “this is great, I should take the stairs more oft...” before you even finish your thought, you trip on the last step before your floor and jam your knee on the step edge. You scream in pain and as you try to get up, your other foot slips and you plow down the stairway. As you fall, your ribcage brakes and punctures one of your lungs. You feel your life slipping away, as you lay agonzing on the floor. Alone and cold, you think to yourself, “So much for healthy choices”.`,
 
   elevator: `Better be safe right? You don't want to pull anything. You get to your office, but notice a maintenance worker just outside on a ladder having some trouble with a ceiling fan.`,
 
@@ -53,11 +53,11 @@ const story = {
 
   bikeRide: 'You ride like a pro, almost gliding through the air. 15 minutes into your commute the heavens open up and rain starts pouring on you! You think about slowing down to be safe, but you can also go hard and get to work faster.',
 
-  slowDown: `You play it safe and hit your brakes to slow down. The car behind you, replies to his spouse telling her the road is dangerous and won’t be replying anymore. However, due to this last message, he fails to see you breaking and crashes into you. You are launched into the street, and hit your head. The impact kills you.`,
+  slowDown: `You play it safe and hit your brakes to slow down. The car behind you, texts his spouse telling her the road is dangerous and won’t be replying anymore. However, due to this last message, he fails to see you breaking and crashes into you. You are launched into the street, and hit your head. The impact kills you.`,
 
   goHard: 'You put those legs to work and pedal like there is no tomorrow. As your approach a red light it turns green in your favor. You keep the pace and pedal hard as you go through it. An incoming car on the turning lane tries to beat the light and turns just as you are coming in hot. You t-bone the car launching you in the air. You hit your head on the ground as you land. You die from the impact.',
 
-  scooter: 'You take a shot at those scooters that have overtaken the city. As soon as you ride of your complex you panic and ride into oncoming traffic. An 18 wheeler that just so happen to have taken a detour that day, is not able to stop on time. He hits you killing you on the spot.',
+  scooter: 'You take a shot at those scooters that have overtaken the city. As soon as you ride of your complex you panic and ride into oncoming traffic. An 18-wheeler that just so happen to have taken a detour that day, is not able to stop on time. He hits you killing you on the spot.',
 
   holdLatter: `You are on a roll, and decide to help a soul in need. While you hold the ladder, you ask the maintenance worker about his day. He turns down to look at you and loses his balance. Trying to get a hold of something he grabs onto the ceiling fan, which is not secured properly. The fan fails to hold the workers weight and comes down with him. On instinct you move to try to catch the worker as he falls, but you don’t make it in time. However, your heroic attempt moves you into the fans trajectory and hits you right on the head. You die from the hit.`,
 
@@ -66,41 +66,43 @@ const story = {
 
 
 const storyChoice = {
-  standby: {'button-one': 'Chose', 'button-two': 'Wisley'},
+ standby: {'button-one': 'Chose', 'button-two': 'Wisley'},
 
-  home: {'button-one': 'wake up', 'button-two': 'break alarm'},
+ home: {'button-one': 'wake up', 'button-two': 'break alarm'},
 
-  wakeup: {'button-one': 'take cold shower', 'button-two': 'skip shower and get breakfast'},
+ wakeup: {'button-one': 'take cold shower', 'button-two': 'skip shower and get breakfast'},
 
-  brakeAlarm: {'button-one': 'tend wound', 'button-two': 'lick wound'},
+ brakeAlarm: {'button-one': 'tend wound', 'button-two': 'lick wound'},
 
-  kitchen: {'button-one': 'pancakes', 'button-two': 'instant ramen'},
+ kitchen: {'button-one': 'pancakes', 'button-two': 'instant ramen'},
 
-  pancakes: {'button-one': 'get ready', 'button-two': 'head out'},
+ pancakes: {'button-one': 'get ready', 'button-two': 'head out'},
 
-  getReady: {'button-one': 'shorts and T-shirt', 'button-two': 'slacks and nice shirt'},
+ getReady: {'button-one': 'shorts and T-shirt', 'button-two': 'slacks and nice shirt'},
 
-  slacksShirt: {'button-one': 'bus', 'button-two': 'uber'},
+ slacksShirt: {'button-one': 'bus', 'button-two': 'uber'},
 
-  busStop: {'button-one': 'ignore', 'button-two': 'start conversation'},
+ busStop: {'button-one': 'ignore', 'button-two': 'start conversation'},
 
-  uber: {'button-one': 'talk down on his team', 'button-two': 'be respectfull, stay quiet'},
+ uber: {'button-one': 'talk down on his team', 'button-two': 'be respectfull, stay quiet'},
 
-  shortAndT: {'button-one': 'ride bike', 'button-two': 'ride scooter'},
+ shortAndT: {'button-one': 'ride bike', 'button-two': 'ride scooter'},
 
-  bikeRide: {'button-one': 'be safe, slow down', 'button-two': 'go hard, power through it'},
+ bikeRide: {'button-one': 'be safe, slow down', 'button-two': 'go hard, power through it'},
 
-  startConvo: {'button-one': 'offer your seat', 'button-two': 'do nothing, you will get off soon anyway'},
+ startConvo: {'button-one': 'offer your seat', 'button-two': 'do nothing, you will get off soon anyway'},
 
-  offerSeat: {'button-one': 'take elevator', 'button-two': 'get a morning workout! take stairs.'},
+ offerSeat: {'button-one': 'take elevator', 'button-two': 'get a morning workout! take stairs.'},
 
-  elevator: {'button-one': 'offer to hold ladder', 'button-two': `ignore and walk into your office`},
+ elevator: {'button-one': 'offer to hold ladder', 'button-two': `ignore and walk into your office`},
 
-  winner: {'button-one': 'You', 'button-two': 'Win!'},
+ winner: {'button-one': 'You', 'button-two': 'Win!'},
 
-  death: {'button-one': 'You', 'button-two': 'Died'},
+ death: {'button-one': 'You', 'button-two': 'Died'},
 
-  noComment: {'button-one': 'No', 'button-two': 'Comment'},
+ noComment: {'button-one': 'No', 'button-two': 'Comment'},
+
+
 };
 
 /*----- app's state (variables) -----*/ 
@@ -142,7 +144,6 @@ function handleReset(evt) {
 
 
 function handleBOne(evt) {
-  choice = evt.target;
 
   if (state === story.home) {
      state = story.wakeup;
@@ -268,11 +269,11 @@ function handleBTwo(evt) {
 
 function render() {
   msgEl.textContent = state;
-  stateCheckingWithSwitch()
+  stateSwitch()
 }
 
 
-function stateCheckingWithSwitch () {
+function stateSwitch () {
   switch (state) {
     case story.standby:
       button1.textContent = storyChoice.standby['button-one'];
@@ -466,7 +467,7 @@ function stateCheckingWithSwitch () {
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
       secEl.style.backgroundColor = '#a01e14';
-      secEl.style.fontSize = '2.5vmin';
+      secEl.style.fontSize = '3vmin';
       bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
       headerEl.textContent = 'Game Over';
@@ -485,7 +486,7 @@ function stateCheckingWithSwitch () {
       button1.textContent = storyChoice.death['button-one'];
       button2.textContent = storyChoice.death['button-two']; 
       secEl.style.backgroundColor = '#a01e14';
-      secEl.style.fontSize = '2.5vmin';
+      secEl.style.fontSize = '3vmin';
       bodyEl.style.color = 'black'; 
       msgEl.style.color = 'black';
       headerEl.textContent = 'Game Over';
