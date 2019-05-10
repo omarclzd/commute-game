@@ -1,5 +1,5 @@
 /*----- constants -----*/ 
-
+//object to store all my states and states' message
 const story = {
   standby: 'Go to work!',
 
@@ -64,7 +64,7 @@ const story = {
   death: 'You failed to get to work.'
 };
 
-
+//object to store the choices' data
 const storyChoice = {
  standby: {'button-one': 'Chose', 'button-two': 'Wisley'},
 
@@ -144,7 +144,7 @@ function handleReset(evt) {
 
 
 function handleBOne(evt) {
-
+//use if and else to delegate wich state to render when the designated button is clicked
   if (state === story.home) {
      state = story.wakeup;
   } else {
@@ -272,7 +272,7 @@ function render() {
   stateSwitch()
 }
 
-
+//the switch function will store all my state's data
 function stateSwitch () {
   switch (state) {
     case story.standby:
