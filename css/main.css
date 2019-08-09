@@ -1,5 +1,6 @@
-html, * {
-  font-family: 'Gugi', cursive;
+html,
+* {
+  font-family: "Gugi", cursive;
   box-sizing: border-box;
 }
 
@@ -7,7 +8,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 200px 1fr 1fr 150px;
-  background-color: #212121; 
+  background-color: #212121;
   color: white;
   height: 100vh;
   margin: 0;
@@ -19,9 +20,7 @@ header {
   display: flex;
   background-color: #1e1b1b;
   font-size: 10vmin;
-  text-shadow: 1px 1px black, 
-               3px 3px #00AFF1, 
-               5px 5px #00AFF1;
+  text-shadow: 1px 1px black, 3px 3px #00aff1, 5px 5px #00aff1;
   align-items: center;
   justify-content: center;
   height: 200px;
@@ -34,20 +33,18 @@ section {
   border-top: 8px solid;
   border-bottom: 8px solid;
   height: 250px;
-  background-color: #00AFF1;
+  background-color: #00aff1;
 }
 
 section p {
- padding: 0 2vmin;
-} 
+  padding: 0 2vmin;
+}
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 1px 1px black, 
-               2px 2px #00AFF1, 
-               3px 3px #00AFF1;
+  text-shadow: 1px 1px black, 2px 2px #00aff1, 3px 3px #00aff1;
 }
 
 main div {
@@ -74,10 +71,11 @@ footer {
   align-items: center;
   background-color: #1e1b1b;
   height: 150px;
-  padding-bottom: 40px;
+  padding-bottom: 0;
 }
 
-#start, #reset {
+#start,
+#reset {
   background-color: #444040;
   color: white;
   font-size: 3vmin;
@@ -86,12 +84,20 @@ footer {
   margin: 2vmin;
   border: none;
   background: none;
-  text-shadow: 1px 1px black, 
-               2px 2px #00AFF1, 
-               2px 2px #00AFF1;
+  text-shadow: 1px 1px black, 2px 2px #00aff1, 2px 2px #00aff1;
 }
 
-#start:hover, #reset:hover {
+#start:hover,
+#reset:hover {
   font-weight: bold;
   font-size: 4vmin;
+}
+
+a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1b1b;
+  padding-bottom: 5px;
 }
